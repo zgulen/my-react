@@ -1,11 +1,20 @@
-import "./Main.scss"
+import "./Main.scss";
 
-const Card = () => {
+const Card = (data) => {
+    const {id, title, desc,image}=data
   return (
     <div className="cards">
-        <h1>qwe</h1>
-    </div>
-  )
-}
+      <div className="title">
+        <h1>{title}</h1>
+      </div>
+      
+      <img src={image} alt={title} />
 
-export default Card
+      <div className="card-over">
+        <p>{desc}</p>
+      </div>
+    </div>
+  );
+};
+
+export default Card;

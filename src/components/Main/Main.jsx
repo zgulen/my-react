@@ -5,7 +5,7 @@ const Main = ( { data } ) => {
   return (
     <div className="card-container">
         {
-            data.map((items) => <Card/>)
+            data.map((items,index) => <Card {...items}  key={index}/>)
         }
     </div>
   )
